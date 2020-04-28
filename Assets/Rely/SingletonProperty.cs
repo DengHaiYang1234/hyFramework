@@ -4,18 +4,15 @@ using UnityEngine;
 
 namespace hyFramework.Rely
 {
-    public abstract class Singleton<T> : ISingleton where T : Singleton<T>
+    public static class SingletonProperty<T> where T : class, ISingleton
     {
         #region privateField
         private static object mLock = new object();
+        static T instance;
         #endregion
 
-        #region protected
-        protected static T instance;
-        #endregion
-        
+
         #region public
-
         public static T Instance
         {
             get
@@ -30,17 +27,11 @@ namespace hyFramework.Rely
             }
         }
 
-        //对象初始化
-        public virtual void OnSingletonInit()
+        public static void Dispose()
         {
-
+            instance = null;
         }
 
-        //释放对象
-        public virtual void Dispose()
-        {
-            
-        }
         #endregion
     }
 }

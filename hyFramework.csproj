@@ -79,15 +79,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Rely\CustomObjectPool.cs" />
+    <Compile Include="Assets\Rely\CustomObjectPoolCache.cs" />
+    <Compile Include="Assets\Rely\InstanceObjectPool.cs" />
     <Compile Include="Assets\Rely\Interface\ICountObserveAble.cs" />
     <Compile Include="Assets\Rely\Interface\IObjectFactory.cs" />
     <Compile Include="Assets\Rely\Interface\IPool.cs" />
     <Compile Include="Assets\Rely\Interface\IPoolable.cs" />
     <Compile Include="Assets\Rely\Interface\ISingleton.cs" />
     <Compile Include="Assets\Rely\Pool.cs" />
-    <Compile Include="Assets\Rely\SafeObjectPool.cs" />
     <Compile Include="Assets\Rely\Singleton.cs" />
     <Compile Include="Assets\Rely\SingletonCreator.cs" />
+    <Compile Include="Assets\Rely\SingletonProperty.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

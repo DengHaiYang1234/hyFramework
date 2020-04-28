@@ -6,7 +6,9 @@ namespace hyFramework.Rely
 {
     public interface IPoolable
     {
+        //回收
         void OnRecycled();
-        bool IsRectcled { get; set; }
+        //是否已回收
+        bool IsRecycled { get; set; }
     }
 }
